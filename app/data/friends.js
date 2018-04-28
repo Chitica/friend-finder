@@ -1,6 +1,6 @@
 
 
-var friendList = [{
+var userData = [{
     name: "Angelina ",
     photo: "",
     scores:[
@@ -16,4 +16,4 @@ var friendList = [{
         "3"
        ]
 }]
-module.exports = friendList;
+module.exports = userData;

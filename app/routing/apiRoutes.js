@@ -4,14 +4,15 @@ var friendList = require("../data/friends.js");
 
 module.exports = function(app){
     app.get("api/friends", function(req, res){
-        res.json(friendList);
+        res.json(userData);
+    })
+
+    app.post("api/friends", function(req, res){
+        var userData = req.body;
+        console.log(JSON.stringify(userData));
+
+        var userResponse = userData.scores;
+        console.log(userResponse);
     })
 
 }
-app.post("api/friends", function(req, res){
-    var userInputs = req.body;
-    console.log(JSON.stringify(userInputs));
-
-    var userResponse = userInputs.scores;
-    console.log(userResponse);
-})
