@@ -1,0 +1,208 @@
+<html>
+   <head>
+      <title>Find A Friend</title>
+      <meta name = "viewport" content = "width = device-width, initial-scale = 1">      
+      <link rel = "stylesheet" href = "https://fonts.googleapis.com/icon?family=Material+Icons">
+      <link rel = "stylesheet" href = "https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.3/css/materialize.min.css">
+      <script type = "text/javascript" src = "https://code.jquery.com/jquery-2.1.1.min.js"></script>           
+      <script src = "https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.3/js/materialize.min.js"></script>
+      <link rel = "stylesheet" href = "ff.css" type = "text/css"> 
+            <script>
+                    $(document).ready(function() {
+                       $('select').material_select();
+                    });
+                 </script>
+   </head>
+   
+   <body>
+    <div class="container">   
+      <div class="row">
+         <form class="col s12">
+            <div class="row">
+                <div class="input-field col s12">
+                    <i class="material-icons prefix">account_circle</i>
+                    <input id="name" type="text" class="validate">
+                    <label for="icon_prefix">Name</label>
+                </div>
+            </div>
+            <div class = "row">
+                <label>Upload Your Photo</label>
+                <div class = "file-field input-field">
+                    <div class = "btn">
+                        <span>Browse</span>
+                        <input type = "file" id="pic"/>
+                    </div>
+                    <div class = "file-path-wrapper">
+                        <input class = "file-path validate" type = "text" placeholder = "Upload file" />
+                    </div>
+                </div>
+            </div>
+            <div class = "row">
+               <div class = "input-field col s12">
+                    <select class="choices" id="one">
+                        <option value="" disabled selected>Choose One</option>
+                        <option value="1">Never</option>
+                        <option value="2">Hardly ever</option>
+                        <option value="3">Some times</option>
+                        <option value="4">Often</option>
+                        <option value="5">always</option>
+                    </select>
+                    <label class="question">How much do you enjoy to travel?</label>
+               </div>
+            </div>   
+            <div class = "row">
+                <div class = "input-field col s12">
+                    <select class="choices" id="two">
+                        <option value="" disabled selected>Choose One</option>
+                        <option value="1">Never</option>
+                        <option value="2">Hardly ever</option>
+                        <option value="3">Some times</option>
+                        <option value="4">Often</option>
+                        <option value="5">always</option>
+                    </select>
+                    <label class="question">How much exercise do you do to stay healthy? </label>
+                </div>
+            </div>
+            <div class = "row">
+                <div class = "input-field col s12">
+                    <select class="choices" id="three">
+                        <option value="" disabled selected>Choose One</option>
+                        <option value="1">Never</option>
+                        <option value="2">Hardly ever</option>
+                        <option value="3">Some times</option>
+                        <option value="4">Often</option>
+                        <option value="5">always</option>
+                    </select>
+                    <label class="question">How often do you express your political views? </label>
+                </div>
+            </div>     
+            <div class = "row">
+                <div class = "input-field col s12">
+                    <select class="choices" id="four">
+                        <option value="" disabled selected>Choose One</option>
+                        <option value="1">Never</option>
+                        <option value="2">Hardly ever</option>
+                        <option value="3">Some times</option>
+                        <option value="4">Often</option>
+                        <option value="5">always</option>
+                    </select>
+                    <label class="question">How frequently do you engaged with social media platforms? </label>
+                </div>
+            </div>     
+            <div class = "row">
+                <div class = "input-field col s12">
+                    <select class="choices" id="five">
+                        <option value="" disabled selected>Choose One</option>
+                        <option value="1">Never</option>
+                        <option value="2">Hardly ever</option>
+                        <option value="3">Some times</option>
+                        <option value="4">Often</option>
+                        <option value="5">always</option>
+                    </select>
+                    <label class="question">How frequently do you go out to bars or clubs? </label>
+                </div>
+            </div> 
+            <div class = "row">
+                <div class = "input-field col s12">
+                    <select class="choices" id="six">
+                        <option value="" disabled selected>Choose One</option>
+                        <option value="1">Never</option>
+                        <option value="2">Hardly ever</option>
+                        <option value="3">Some times</option>
+                        <option value="4">Often</option>
+                        <option value="5">always</option>
+                    </select>
+                    <label class="question">How often you do you hang out with friends?</label>
+                </div>
+            </div>          
+            <div class = "row">
+                <div class = "input-field col s12">
+                    <select class="choices" id="seven">
+                        <option value="" disabled selected>Choose One</option>
+                        <option value="1">Never</option>
+                        <option value="2">Hardly ever</option>
+                        <option value="3">Some times</option>
+                        <option value="4">Often</option>
+                        <option value="5">always</option>
+                    </select>
+                    <label class="question">How much time do you spend listening to music?</label>
+                </div>
+            </div> 
+            <div class = "row">
+                <div class = "input-field col s12">
+                    <select class="choices" id="eight">
+                        <option value="" disabled selected>Choose One</option>
+                        <option value="1">Never</option>
+                        <option value="2">Hardly ever</option>
+                        <option value="3">Some times</option>
+                        <option value="4">Often</option>
+                        <option value="5">always</option>
+                    </select>
+                    <label class="question">How often do you watch television?</label>
+                </div>
+            </div>          
+            <div class = "row">
+                <div class = "input-field col s12">
+                    <select class="choices" id="nine" >
+                        <option value="" disabled selected>Choose One</option>
+                        <option value="1">Never</option>
+                        <option value="2">Hardly ever</option>
+                        <option value="3">Some times</option>
+                        <option value="4">Often</option>
+                        <option value="5">always</option>
+                    </select>
+                    <label class="question">How often do you spend holidays with family?</label>
+                </div>
+            </div>          
+            <div class = "row">
+                <div class = "input-field col s12">
+                    <select class="choices" id="ten">
+                        <option value="" disabled selected>Choose One</option>
+                        <option value="1">Never</option>
+                        <option value="2">Hardly ever</option>
+                        <option value="3">Some times</option>
+                        <option value="4">Often</option>
+                        <option value="5">always</option>
+                    </select>
+                    <label class="question">How often do you clean your kitchen?</label>
+
+        
+            <button id="submit" class="btn waves-effect waves-light" type="submit" name="action">Submit
+                <i class="material-icons right">send</i>
+            </button>
+    
+                                                                     
+     </form>  
+     <script type="text/javascript">
+     $(document).ready(function(){
+         $("#submit").on("click", function(){
+             var newPerson = {
+                 name: $("#name").val().trim(),
+                 photo: $("#pic").val().trim(),
+                 scores: [
+                     $("#one").val().trim(),
+                     $("#two").val().trim(),
+                     $("#three").val().trim(),
+                     $("#four").val().trim(),
+                     $("#five").val().trim(),
+                     $("#six").val().trim(),
+                     $("#seven").val().trim(),
+                     $("#eight").val().trim(),
+                     $("#nine").val().trim(),
+                     $("#ten").val().trim()               
+                 ]
+             }
+             console.log($("#one").val());
+
+
+         })
+
+     })
+
+     
+     
+     </script>   
+         </div>
+      </div>
+   </body>   
+</html>
