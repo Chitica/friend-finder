@@ -222,9 +222,7 @@
                 } 
 
                 }else{alert("Please complete the form")}
-               // console.log('userData = ' + JSON.stringify(userData));
-               
-               //  var currentURL = window.location.origin;
+    
                 $.post("/api/friends", userData).done(function(data){
                     $("#matchName").text(data.name);
                     $("#matchPic").attr("src", data.photo);

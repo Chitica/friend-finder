@@ -33,55 +33,8 @@ module.exports = function(app){
 
         userData.push(req.body);
 
-        // var newUser = req.body;
-
-        // var newUserScores = newUser.scores;
-
-        // var matchName = "";
-        // var matchPic = "";
-        // var matchNumber = "";
-
-        // for( var i = 0; i < userData.length; i++ ){
-
-        //     var bestMatch = 0;
-                
-        //         for( var k = 0; i < newUserScores.length; k++){
-        //             bestMatch += Math.abs(userData[i].scores[k] - newUserScores[k]);
-
-        //         }
-
-        //         console.log(bestMatch)
-
-        //         if( bestMatch < matchNumber ){
-
-        //             matchNumber = bestMatch;
-        //             matchName = userData.name;
-        //             matchPic = userData.photo;
-        //         }
-        // }
-
-        // userData.push(newUser);
-
-        // res.json({
-        //     status:"OK",
-        //     matchName: matchName,
-        //     matchPic:matchPic
-        // })
-
-
+       
 
     })
 
 }
-
-// Import the list of friend entries
-// var friends = require('../data/friends.js');
-
-// // Export API routes
-// module.exports = function(app) {
-// 	// console.log('___ENTER apiRoutes.js___');
-
-// 	// Total list of friend entries
-// 	app.get('/api/friends', function(req, res) {
-// 		res.json(friends);
-// });
