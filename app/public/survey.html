@@ -21,25 +21,17 @@
             <div class="row">
                 <div class="input-field col s12">
                     <i class="material-icons prefix">account_circle</i>
-                    <input id="name" type="text" class="validate">
+                    <input id="name" type="text" class="validate" required>
                     <label for="icon_prefix">Name</label>
                 </div>
             </div>
             <div class = "row">
-                <label>Upload Your Photo</label>
-                <div class = "file-field input-field">
-                    <div class = "btn">
-                        <span>Browse</span>
-                        <input type = "file" id="pic"/>
-                    </div>
-                    <div class = "file-path-wrapper">
-                        <input class = "file-path validate" type = "text" placeholder = "Upload file" />
-                    </div>
-                </div>
+                <label>Link to Your Image</label>
+               <input id="photo" type="text" class="validate" required>
             </div>
             <div class = "row">
                <div class = "input-field col s12">
-                    <select class="choices" id="one">
+                    <select class="choices" id="one" required>
                         <option value="" disabled selected>Choose One</option>
                         <option value="1">Never</option>
                         <option value="2">Hardly ever</option>
@@ -143,7 +135,7 @@
             </div>          
             <div class = "row">
                 <div class = "input-field col s12">
-                    <select class="choices" id="nine" >
+                    <select class="choices" id="nine">
                         <option value="" disabled selected>Choose One</option>
                         <option value="1">Never</option>
                         <option value="2">Hardly ever</option>
@@ -165,50 +157,89 @@
                         <option value="5">always</option>
                     </select>
                     <label class="question">How often do you clean your kitchen?</label>
-
+                </div>
+<div></div>
         
-            <button id="submit" class="btn waves-effect waves-light" type="submit" name="action">Submit
+            <button id="submit"  data-target="modal1" class="btn waves-effect waves-light modal-trigger" type="submit" name="action">Submit
                 <i class="material-icons right">send</i>
             </button>
-    
+
+ 
+  <!-- Modal Structure -->
+  <div id="modal1" class="modal">
+    <div class="modal-content">
+      <h4>Meet Your New Best Friend</h4>
+      <h5 id="matchName"></h5>
+      <img id="matchPic">
+    </div>
+    <div class="modal-footer">
+      <a href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat">Close</a>
+    </div>
+  </div>
                                                                      
      </form>  
+
      <script type="text/javascript">
-     $(document).ready(function(){
-         $("#submit").on("click", function(){
-            console.log($("#one").val());
+        $(document).ready(function(){
 
-             var userData = {
-                 name: $("#name").val().trim(),
-                 photo: $("#pic").val().trim(),
-                 scores: [
-                     $("#one").val().trim(),
-                     $("#two").val().trim(),
-                     $("#three").val().trim(),
-                     $("#four").val().trim(),
-                     $("#five").val().trim(),
-                     $("#six").val().trim(),
-                     $("#seven").val().trim(),
-                     $("#eight").val().trim(),
-                     $("#nine").val().trim(),
-                     $("#ten").val().trim()               
-                 ]
-             }
+            $('.modal-trigger').leanModal();
 
-             var currentURL = window.location.origin;
+           $('#submit').on('click', function(event) {
+               event.preventDefault();
+               
+               function validateData(){
+               
+                   var isBueno = true;
+                   $(".validate").each(function(){
+                       if($(this).val() === '') {
+                           isBueno = false;
+                           alert("Please fill out all the fields")
+                       }
+                   })
+                    $("select").each(function(){
+                       if($(this).val() === null) {
+                           isBueno = false;
+                       }
+                   })
+                   return isBueno;
+               }
+                if(validateData() === true){
+               var userData = {
+                    name: $("#name").val().trim(),
+                    photo: $("#photo").val().trim(),
+                    scores: [
+                        $("#one").val(),
+                        $("#two").val(),
+                        $("#three").val(),
+                        $("#four").val(),
+                        $("#five").val(),
+                        $("#six").val(),
+                        $("#seven").val(),
+                        $("#eight").val(),
+                        $("#nine").val(),
+                        $("#ten").val(),              
+                    ]
+                } 
 
-             $.post(currentURL + "/api/friends", userData, function(data){
-	    		console.log(data);
-             } )
+                }else{alert("Please complete the form")}
+               // console.log('userData = ' + JSON.stringify(userData));
+               
+               //  var currentURL = window.location.origin;
+                $.post("/api/friends", userData).done(function(data){
+                    $("#matchName").text(data.name);
+                    $("#matchPic").attr("src", data.photo);
+                })
+                
+            })
+           
+            
+        })
+        
+        
+        </script> 
 
-
-         })
-
-     })
-
-     
-     
-     </script>   
+   
+   
          </div>
       </div>
    </body>   
