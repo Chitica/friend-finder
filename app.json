@@ -1,0 +1,7 @@
+{
+    "name": "Node.js Friend Finder",
+    "description": "An app to help find a good friend",
+    "repository": "https://github.com/Chitica/friend-finder",
+    "logo": "",
+    "keywords": ["node", "express", "static"]
+}
