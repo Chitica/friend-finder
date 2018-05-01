@@ -1,7 +1,13 @@
-label.question {
-    font-size:30px;
-}
 
 .choices{
-    margin-top: 25px;
+    margin-top: 10px;
+}
+.banner{
+    background: #4A458F;
+    color: white;
+    height: 500px;
+    padding: 50px
+}
+.btn{
+    color: #4A458F;
 }
