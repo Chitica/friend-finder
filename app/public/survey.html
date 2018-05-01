@@ -163,8 +163,7 @@
             <button id="submit"  data-target="modal1" class="btn waves-effect waves-light modal-trigger" type="submit" name="action" style="background-color: #4A458F">Submit
                 <i class="material-icons right">send</i>
             </button>
-
- 
+            <a class="waves-effect waves-light btn" style="background-color: #4A458F; float: right"><i class="material-icons right">home</i>Home</a>
   <!-- Modal Structure -->
   <div id="modal1" class="modal">
     <div class="modal-content">
@@ -178,12 +177,9 @@
   </div>
                                                                      
      </form>  
-
      <script type="text/javascript">
         $(document).ready(function(){
-
             $('.modal-trigger').leanModal();
-
            $('#submit').on('click', function(event) {
                event.preventDefault();
                
@@ -220,7 +216,6 @@
                         $("#ten").val(),              
                     ]
                 } 
-
                 }else{alert("Please complete the form")}
     
                 $.post("/api/friends", userData).done(function(data){
@@ -235,7 +230,6 @@
         
         
         </script> 
-
    
    
          </div>
